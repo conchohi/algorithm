@@ -3,8 +3,6 @@ package 자료구조.stack;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Stack;
 
 public class Baekjoon1874 {
@@ -14,7 +12,8 @@ public class Baekjoon1874 {
         int n = Integer.parseInt(bf.readLine());
         int[] nums = new int[n];
         Stack<Integer> stack = new Stack<>();
-        List<String> answer = new ArrayList<>();
+
+        StringBuffer stringBuffer = new StringBuffer();
 
         stack.push(0);
 
@@ -24,25 +23,22 @@ public class Baekjoon1874 {
         int addNum = 1;
 
         for (int num : nums) {
-            if (num > addNum) {
+            if (num >= addNum) {
                 while (addNum <= num) {
-                    stack.push(addNum);
-                    answer.add("+");
-                    addNum++;
+                    stack.push(addNum++);
+                    stringBuffer.append("+\n");
                 }
                 stack.pop();
-                answer.add("-");
+                stringBuffer.append("-\n");
             } else {
                 int top = stack.pop();
                 if(top != num){
                     System.out.println("NO");
                     return;
                 }
-                answer.add("-");
+                stringBuffer.append("-\n");
             }
         }
-        for (String s : answer) {
-            System.out.println(s);
-        }
+        System.out.println(stringBuffer);
     }
 }
