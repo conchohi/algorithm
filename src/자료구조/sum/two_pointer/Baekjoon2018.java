@@ -2,7 +2,7 @@ package 자료구조.sum.two_pointer;
 
 import java.util.Scanner;
 
-public class Backjoon2018 {
+public class Baekjoon2018 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();

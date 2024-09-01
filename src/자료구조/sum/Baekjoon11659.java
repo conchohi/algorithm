@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Backjoon11659 {
+public class Baekjoon11659 {
     public static void main(String[] args) throws IOException {
         // 1초 이내 -> 10^8 이하 연산
         // O(n^2) 이면 실패
