@@ -21,25 +21,24 @@ public class Baekjoon1874 {
         for (int i = 0; i < n; i++) {
             nums[i] = Integer.parseInt(bf.readLine());
         }
-        int start = 1;
+        int addNum = 1;
 
         for (int num : nums) {
-            if(num > stack.peek()){
-                while(start <= num){
-                    stack.push(start);
+            if (num > addNum) {
+                while (addNum <= num) {
+                    stack.push(addNum);
                     answer.add("+");
-                    if(start == num){
-                        answer.add("-");
-                        stack.pop();
-                    }
-                    start++;
+                    addNum++;
                 }
-            } else if(num == stack.peek()){
                 stack.pop();
                 answer.add("-");
-            } else{
-                System.out.println("NO");
-                return;
+            } else {
+                int top = stack.pop();
+                if(top != num){
+                    System.out.println("NO");
+                    return;
+                }
+                answer.add("-");
             }
         }
         for (String s : answer) {
