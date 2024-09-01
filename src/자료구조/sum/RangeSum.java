@@ -1,4 +1,4 @@
-package sum;
+package 자료구조.sum;
 
 public class RangeSum {
     public static void main(String[] args) {

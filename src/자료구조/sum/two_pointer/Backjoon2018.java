@@ -1,4 +1,4 @@
-package sum.two_pointer;
+package 자료구조.sum.two_pointer;
 
 import java.util.Scanner;
 

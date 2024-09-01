@@ -1,4 +1,4 @@
-package sum.slide_window;
+package 자료구조.sum.slide_window;
 
 import java.io.BufferedReader;
 import java.io.IOException;

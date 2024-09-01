@@ -1,4 +1,4 @@
-package array;
+package 자료구조.array;
 
 import java.io.*;
 

@@ -1,4 +1,4 @@
-package sum;
+package 자료구조.sum;
 
 import java.io.BufferedReader;
 import java.io.IOException;
