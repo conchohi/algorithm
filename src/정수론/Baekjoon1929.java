@@ -1,4 +1,4 @@
-package 소수;
+package 정수론;
 
 import java.util.Scanner;
 
